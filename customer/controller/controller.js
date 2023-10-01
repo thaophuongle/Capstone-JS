@@ -126,7 +126,7 @@ const renderList = (phoneList) => {
       cartCount += ele.quantity;
     });
     const subTotal = calculateSubTotal(cart);
-    const shipping = subTotal > 0 ? 10 : 0;
+    // const shipping = subTotal > 0 ? 10 : 0;
     document.getElementById('cartCount').innerHTML = cartCount;
     // document.getElementById('shipping').innerHTML = '$' + shipping;
     // document.getElementById('subTotal').innerHTML = '$' + subTotal;
