@@ -3,7 +3,20 @@
         padding: 0;
         background-color: black;
     }
+    .card-body {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        min-height: 250px;
+        padding: 1.25rem;
+    }
     .card .img-container {
         height: 250px;
+    }
+    .card-title {
+        color: yellowgreen;
+    }
+    .btn-block{
+        position: absolute;
+        bottom: 5px;
     }
 }

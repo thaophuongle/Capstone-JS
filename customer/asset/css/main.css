@@ -94,14 +94,38 @@ header #cartCount {
   padding: 0;
   background-color: black;
 }
+.product .card-body {
+  flex: 1 1 auto;
+  min-height: 250px;
+  padding: 1.25rem;
+}
 .product .card .img-container {
   height: 250px;
+}
+.product .card-title {
+  color: yellowgreen;
+}
+.product .btn-block {
+  position: absolute;
+  bottom: 5px;
 }
 
 footer {
   background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8));
   bottom: 0;
   width: 100%;
+}
+footer .media-icon {
+  margin-left: 10px;
+}
+footer .media-icon:hover {
+  text-decoration: none;
+}
+footer h6 {
+  font-weight: 700;
+}
+footer h6 i {
+  margin-right: 15px;
 }
 
 .meh {

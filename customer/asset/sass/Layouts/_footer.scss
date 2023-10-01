@@ -1,5 +1,19 @@
 footer {
-    background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8));
+    background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8));;
     bottom: 0;
     width: 100%;
+    .media-icon {
+        margin-left: 10px;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    h6 {
+        font-weight: 700;
+        i {
+            margin-right: 15px;
+        }
+    }
 }
