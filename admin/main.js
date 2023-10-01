@@ -51,7 +51,7 @@ function editProduct(id) {
       document.querySelector("#inputID").hidden = false;
       var product = res.data;
 
-      document.querySelector("#inputID").value = product.id;
+      document.querySelector("#productID").value = product.id;
       document.querySelector("#name").value = product.name;
       document.querySelector("#price").value = product.price;
       document.querySelector("#screenSize").value = product.screen;
