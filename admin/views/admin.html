@@ -91,10 +91,10 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fa-solid fa-arrow-up-short-wide"></i></span>
                 </div>
-                <select class="form-control" name="chucvu" id="phoneBrand">
-                  <option value="default" selected disabled>Sort</option>
-                  <option>Price high to low</option>
-                  <option>Price low to high</option>
+                <select onchange="sortTable()" class="form-control" id="sorting">
+                  <option value="default">Sort</option>
+                  <option value="descending">Price high to low</option>
+                  <option value="ascending">Price low to high</option>
                 </select>
               </div>
 
@@ -306,8 +306,8 @@
                       </div>
                       <select class="form-control" name="chucvu" id="phoneBrand">
                         <option value="default" selected disabled>Select brand</option>
-                        <option value="apple">Apple</option>
-                        <option value="samsung">Samsung</option>
+                        <option>Iphone</option>
+                        <option>Samsung</option>
                       </select>
                     </div>
     

@@ -21,13 +21,15 @@ function resetForm() {
 }
 
 document.querySelector("#addPhoneForm").onclick = function () {
+  document.querySelector("#btnUpdate").style.display = "none";
+  document.querySelector("#btnAddPhone").style.display = "inline-block";
   document.querySelector("#inputID").hidden = true;
 };
 
 //ADD product to the table
 document.querySelector("#btnAddPhone").onclick = function () {
   var product = retrieveInfo();
-  //   console.log(product);
+  //console.log(product);
   addProductToList(product)
     .then(function (res) {
       $("#myModal").modal("hide");
@@ -42,6 +44,8 @@ document.querySelector("#btnAddPhone").onclick = function () {
 
 //EDIT product
 function editProduct(id) {
+  document.querySelector("#btnUpdate").style.display = "inline-block";
+  document.querySelector("#btnAddPhone").style.display = "none";
   getProductById(id)
     .then(function (res) {
       document.querySelector("#inputID").hidden = false;
@@ -88,4 +92,50 @@ function deleteProduct(id) {
     .catch(function (err) {
       console.log(err);
     });
+}
+
+//Search product by product name
+document
+  .querySelector("#txtSearch")
+  .addEventListener("keydown", function (event) {
+    console.log(event);
+
+    if (event.key !== "Enter") return;
+    var name = event.target.value;
+
+    getProductList(name)
+      .then(function (res) {
+        console.log(res.data);
+        renderProductsList(res.data);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  });
+
+//SORTING
+function sortTable() {
+  var table = document
+    .getElementById("myTable")
+    .getElementsByTagName("tbody")[0];
+  var rows = Array.from(table.rows);
+
+  var sortOption = document.getElementById("sorting").value;
+
+  rows.sort(function (a, b) {
+    var priceA = parseFloat(a.cells[2].textContent);
+    var priceB = parseFloat(b.cells[2].textContent);
+
+    if (sortOption === "ascending") {
+      return priceA - priceB;
+    } else if (sortOption == "descending") {
+      return priceB - priceA;
+    } else {
+      fetchProductList();
+    }
+  });
+
+  rows.forEach(function (row) {
+    table.appendChild(row);
+  });
 }
