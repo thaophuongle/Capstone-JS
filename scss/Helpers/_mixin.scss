@@ -1,0 +1,13 @@
+@mixin styleBtn($bg, $radius, $color, $pd, $bgHover, $colorHover) {
+
+    background: $bg;
+    border-radius: $radius;
+    color: $color;
+    padding: $pd;
+    transition: all 0.15s;
+
+    &:hover {
+        background: $bgHover;
+        color: $colorHover;
+    }
+}

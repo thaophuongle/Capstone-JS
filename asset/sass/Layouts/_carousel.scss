@@ -1,0 +1,23 @@
+.carousel {
+    background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url(../img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 628px;
+    .banner-phone-image img{ 
+            width: 100%;
+    }
+    .display-4 {
+        font-weight: 300;
+        line-height: 1.2;
+    }
+    .btn {
+        font-size: 18px;
+    }
+    .red-btn {
+        background-color: #df461f;
+    }
+    .star-rating a {
+        color: rgba(255, 255, 255, 0.5);
+        margin-right: 10px;
+    }
+}

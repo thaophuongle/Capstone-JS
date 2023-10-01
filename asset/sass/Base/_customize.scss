@@ -1,0 +1,16 @@
+.btn {
+    position: relative;
+    border: 0;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Muli';
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #294d5c;
+    cursor: pointer;
+    transition: all 0.15s;
+}

@@ -1,0 +1,20 @@
+header {
+
+    .black {
+        background: #000000cc;
+        color: #fff;
+
+        a {
+            color: #fff;
+        }
+
+    .nav-link {
+        transition: 0.3s all ease-in-out;
+            
+            &:hover {
+                transform: scale(1.15);
+            }
+    }
+    }
+
+}

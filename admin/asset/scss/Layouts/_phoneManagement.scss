@@ -1,0 +1,22 @@
+.phoneManagement {
+    &__wrap {
+        background-color: #ffffff;
+
+        .searchAndSort {
+            background-color: #f7f7f7;
+        }
+        .phoneBanner {
+            background-color: $purple-color-1;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+            i {
+                margin-right: 5px;
+            }
+
+            .btn-banner {
+                @include styleBtn($dark-color-1, 5px, #ffffffd9, 6px 12px, #ffffff, #212529);
+            }
+        }
+    }
+}

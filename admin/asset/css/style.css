@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  font-size: 16px;
+}
+
+body {
+  padding-top: 70px;
+  margin-bottom: 0px;
+  background-color: #f7f7f7;
+}
+
+header .black {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+header .black a {
+  color: #fff;
+}
+header .black .nav-link {
+  transition: 0.3s all ease-in-out;
+}
+header .black .nav-link:hover {
+  transform: scale(1.15);
+}
+
+.phoneManagement__wrap {
+  background-color: #ffffff;
+}
+.phoneManagement__wrap .searchAndSort {
+  background-color: #f7f7f7;
+}
+.phoneManagement__wrap .phoneBanner {
+  background-color: rgba(29, 38, 113, 0.7019607843);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.phoneManagement__wrap .phoneBanner i {
+  margin-right: 5px;
+}
+.phoneManagement__wrap .phoneBanner .btn-banner {
+  background: #212529;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.8509803922);
+  padding: 6px 12px;
+  transition: all 0.15s;
+}
+.phoneManagement__wrap .phoneBanner .btn-banner:hover {
+  background: #ffffff;
+  color: #212529;
+}
+
+footer {
+  background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8));
+  bottom: 0;
+  width: 100%;
+}
+footer .media-icon {
+  margin-left: 10px;
+}
+footer .media-icon:hover {
+  text-decoration: none;
+}
+footer h6 {
+  font-weight: 700;
+}
+footer h6 i {
+  margin-right: 15px;
+}/*# sourceMappingURL=style.css.map */
