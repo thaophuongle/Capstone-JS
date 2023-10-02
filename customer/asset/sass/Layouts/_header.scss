@@ -6,7 +6,7 @@ header{
         position: relative;
     }
     #cartCount {
-        position: absolute;
+        position: relative;
         height: 1rem;
         width: 1rem;
         background: white;
@@ -15,8 +15,8 @@ header{
         border: 1px solid white;
         text-align: center;
         font-weight: 600;
-        top: 0;
-        right: 0;
+        top: -10px;
+        right: 12px;
         user-select: none;
     }
 }
