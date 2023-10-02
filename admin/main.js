@@ -29,17 +29,48 @@ document.querySelector("#addPhoneForm").onclick = function () {
 //ADD product to the table
 document.querySelector("#btnAddPhone").onclick = function () {
   var product = retrieveInfo();
+
+  var valid = checkEmpty(
+    product.name,
+    "#tbname",
+    "Product name cannot be empty"
+  );
+  valid &=
+    checkEmpty(product.price, "#tbprice", "Price cannot be empty") &&
+    checkNumber(product.price, "#tbprice", "Price must be number");
+
+  valid &= checkEmpty(product.screen, "#tbscreen", "Screen cannot be empty");
+  valid &= checkEmpty(
+    product.backCamera,
+    "#tbbackCam",
+    "Screen cannot be empty"
+  );
+  valid &= checkEmpty(
+    product.frontCamera,
+    "#tbfrontCam",
+    "Screen cannot be empty"
+  );
+  valid &= checkEmpty(product.img, "#tbimg", "Image link cannot be empty");
+  valid &= checkEmpty(product.desc, "#tbDesc", "Description cannot be empty");
+  valid &= checkEmpty(
+    product.type,
+    "#tbBrand",
+    "Product brand must be selected"
+  );
   //console.log(product);
-  addProductToList(product)
-    .then(function (res) {
-      $("#myModal").modal("hide");
-      fetchProductList();
-      console.log(res);
-      resetForm();
-    })
-    .catch(function (err) {
-      console.log(err);
-    });
+
+  if (valid) {
+    addProductToList(product)
+      .then(function (res) {
+        $("#myModal").modal("hide");
+        fetchProductList();
+        console.log(res);
+        resetForm();
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  }
 };
 
 //EDIT product
@@ -70,16 +101,46 @@ function editProduct(id) {
 function updateProduct() {
   var product = retrieveInfo();
 
-  updateProductById(product.id, product)
-    .then(function (res) {
-      console.log(res);
-      $("#myModal").modal("hide");
-      fetchProductList();
-      resetForm();
-    })
-    .catch(function (err) {
-      console.log(err);
-    });
+  var valid = checkEmpty(
+    product.name,
+    "#tbname",
+    "Product name cannot be empty"
+  );
+  valid &=
+    checkEmpty(product.price, "#tbprice", "Price cannot be empty") &&
+    checkNumber(product.price, "#tbprice", "Price must be number");
+
+  valid &= checkEmpty(product.screen, "#tbscreen", "Screen cannot be empty");
+  valid &= checkEmpty(
+    product.backCamera,
+    "#tbbackCam",
+    "Screen cannot be empty"
+  );
+  valid &= checkEmpty(
+    product.frontCamera,
+    "#tbfrontCam",
+    "Screen cannot be empty"
+  );
+  valid &= checkEmpty(product.img, "#tbimg", "Image link cannot be empty");
+  valid &= checkEmpty(product.desc, "#tbDesc", "Description cannot be empty");
+  valid &= checkEmpty(
+    product.type,
+    "#tbBrand",
+    "Product brand must be selected"
+  );
+
+  if (valid) {
+    updateProductById(product.id, product)
+      .then(function (res) {
+        console.log(res);
+        $("#myModal").modal("hide");
+        fetchProductList();
+        resetForm();
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  }
 }
 
 //delete product
