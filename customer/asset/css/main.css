@@ -115,6 +115,11 @@ header #cartCount {
   position: absolute;
   bottom: 5px;
 }
+@media (max-width: 768px) {
+  .product #selectList {
+    width: 40% !important;
+  }
+}
 
 footer {
   background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8));

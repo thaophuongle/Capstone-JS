@@ -1,41 +1,3 @@
-// function renderProductsList(productsList) {
-//   var content = "";
-//   for (var i = 0; i < productsList.length; i++) {
-//     var product = productsList[i];
-//     var contentTr = `
-//     <div class="card col-3 mr-5 mb-5  ${product.type}">
-//     <div class="wrap">
-//       <div class="img-container">
-//       <img src="${product.img}" alt="" class="img-fluid" width="100%" />
-//       </div>
-//       <div class="details mt-3 mb-3 ">
-//       <p>ID: ${product.id}<br>
-//       Sản Phẩm: ${product.name}<br>
-//       Giá: $${product.price} <br>
-//       Màn hình: ${product.screen}<br>
-//       Camera sau: ${product.backCamera}<br>
-//       Camera trước: ${product.frontCamera} <br>
-//       Mô Tả: ${product.desc}<br> 
-//       </p>              
-//       </div>
-//       <div class="btn-add">
-//       <button class="add-btn" onclick="addItem()">
-//       Add
-//       <i class="fas fa-chevron-right">
-//       </i >
-//       </button>
-//       </div>
-//     </div>      
-//     </div>
-//           `;
-
-//     content += contentTr;
-//   }
-
-//   //in danh sách ra giao diện.
-//   document.querySelector("#phoneList").innerHTML = content;
-// }
-
 const renderList = (phoneList) => {
     let content = '';
     phoneList.forEach((ele) => {
@@ -126,10 +88,6 @@ const renderList = (phoneList) => {
       cartCount += ele.quantity;
     });
     const subTotal = calculateSubTotal(cart);
-    // const shipping = subTotal > 0 ? 10 : 0;
     document.getElementById('cartCount').innerHTML = cartCount;
-    // document.getElementById('shipping').innerHTML = '$' + shipping;
-    // document.getElementById('subTotal').innerHTML = '$' + subTotal;
-    // document.getElementById('tax').innerHTML = '$' + Math.floor(subTotal * 0.1);
     document.getElementById('priceTotal').innerHTML = '$' + subTotal.toLocaleString();
   }

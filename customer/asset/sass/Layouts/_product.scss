@@ -19,4 +19,9 @@
         position: absolute;
         bottom: 5px;
     }
+    @media (max-width: 768px){
+        #selectList {
+            width: 40% !important;
+        }
+    }
 }
