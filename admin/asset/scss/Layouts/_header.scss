@@ -1,4 +1,13 @@
 header {
+    .navbar {
+        .container {
+            .navbar-toggler {
+                &-icon {
+                    color: #fff;
+                }
+            }
+        }
+    }
 
     .black {
         background: #000000cc;

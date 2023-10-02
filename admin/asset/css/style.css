@@ -16,6 +16,9 @@ body {
   background-color: #f7f7f7;
 }
 
+header .navbar .container .navbar-toggler-icon {
+  color: #fff;
+}
 header .black {
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
