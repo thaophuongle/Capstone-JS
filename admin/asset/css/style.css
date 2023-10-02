@@ -16,20 +16,16 @@ body {
   background-color: #f7f7f7;
 }
 
-header .navbar .container .navbar-toggler-icon {
-  color: #fff;
-}
-header .black {
+header nav {
   background: rgba(0, 0, 0, 0.8);
+}
+header nav a {
   color: #fff;
 }
-header .black a {
-  color: #fff;
-}
-header .black .nav-link {
+header nav .nav-link {
   transition: 0.3s all ease-in-out;
 }
-header .black .nav-link:hover {
+header nav .nav-link:hover {
   transform: scale(1.15);
 }
 

@@ -1,29 +1,19 @@
 header {
-    .navbar {
-        .container {
-            .navbar-toggler {
-                &-icon {
-                    color: #fff;
-                }
-            }
-        }
-    }
 
-    .black {
-        background: #000000cc;
+nav{
+    background: rgba(0, 0, 0, 0.8);
+
+    a {
         color: #fff;
-
-        a {
-            color: #fff;
-        }
-
-    .nav-link {
+      }
+  
+      .nav-link {
         transition: 0.3s all ease-in-out;
-            
-            &:hover {
-                transform: scale(1.15);
-            }
-    }
-    }
+  
+        &:hover {
+          transform: scale(1.15);
+        }
+      }
+}
 
 }
